@@ -1,5 +1,5 @@
 import { cart, removeFromCart, updateDeliveryOption } from "../../data/cart.js";
-import { getProduct, products } from "../../data/products.js";
+import { getProduct, products, loadProducts } from "../../data/products.js";
 import { formatCurrency } from "../utils/money.js";
 import dayjs from "https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js";
 import { deliveryOptions, getDeliveryOption } from "../../data/deliveryOptions.js";
@@ -117,5 +117,5 @@ export function renderOrderSummary() {
 }
 
 if (document.querySelector('.js-order-summary')) {
-  renderOrderSummary();
+  loadProducts(renderOrderSummary);
 }
