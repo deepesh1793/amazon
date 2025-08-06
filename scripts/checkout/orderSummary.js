@@ -115,7 +115,3 @@ export function renderOrderSummary() {
   })
 
 }
-
-if (document.querySelector('.js-order-summary')) {
-  loadProducts(renderOrderSummary);
-}
